@@ -4,7 +4,7 @@
 
 name: My-github-actions-laggy-test
 env:
-  APPLICATION_NAME: "My Flask1"
+  APPLICATION_NAME: "My Flask"
   PACKAGE_NAME    : "My-package-deploy-ver-${{ github.sha }}"
   
 # Controls when the workflow will run
