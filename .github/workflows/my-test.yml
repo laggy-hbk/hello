@@ -3,7 +3,10 @@
 #---------------------------------
 
 name: My-github-actions-laggy-test
-
+env:
+  APPLICATION_NAME: "My Flask"
+  PACKAGE_NAME    : "My-package-deploy-ver-${{ github.sha }}"
+  
 # Controls when the workflow will run
 on:
   push:
@@ -23,6 +26,12 @@ jobs:
     steps:
     - name: Print Hello Message
       run : echo "Hello World testing job!"
+    - name: Exec few commands
+      run : |
+        echo "HELLO command 1"
+        echo "HELLO command 2"
+        echo "Application_name: ${{ env.APPLICATION_NAME}}"
+      
   
   deploy_jobs:
     runs-on: ubuntu-latest
