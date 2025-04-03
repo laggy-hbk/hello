@@ -51,8 +51,8 @@ jobs:
       run : echo "Hello World deploy job!"
     - name: Print VALUE job env
       run: |
-        echo: "Print var1: ${{ env.Var1 }}"
-        echo: "Print var2: ${{ env.Var2 }}"
+        echo "Print var1: ${{ env.Var1 }}"
+        echo "Print var2: ${{ env.Var2 }}"
       
 
     - name: Print deploy package
