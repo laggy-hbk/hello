@@ -49,6 +49,8 @@ jobs:
 
     - name: Print deploy package
       run : echo "Deploy_package_version:${{ env.PACKAGE_NAME }}"
+    - name: Test some package
+      run : zip --version
   
     
 
