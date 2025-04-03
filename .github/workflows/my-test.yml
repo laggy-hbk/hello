@@ -33,8 +33,7 @@ jobs:
         echo "Application_name: ${{ env.APPLICATION_NAME}}"
     - name: List current folder
       run : ls -la
-    - name: Git clone repo
-      uses: actions/checkout@v1
+
       
   
   deploy_jobs:
