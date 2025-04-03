@@ -39,6 +39,9 @@ jobs:
     steps:
     - name: Print Hello Message
       run : echo "Hello World deploy job!"
+
+    - name: Print deploy package
+      run : echo "Deploy_package_version:${{ env.PACKAGE_NAME }}"
   
     
 
