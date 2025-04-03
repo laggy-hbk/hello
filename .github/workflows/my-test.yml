@@ -42,10 +42,18 @@ jobs:
   
   deploy_jobs:
     runs-on: ubuntu-latest
+    env:
+      Var1: Job-level_var1
+      Var2: Job-level-var2
     needs: testing_job
     steps:
     - name: Print Hello Message
       run : echo "Hello World deploy job!"
+    - name: Print VALUE job env
+      run: |
+        echo: "Print var1=${{env.Var1}}"
+        echo: "Print var2=${{env.Var2}}"
+      
 
     - name: Print deploy package
       run : echo "Deploy_package_version:${{ env.PACKAGE_NAME }}"
